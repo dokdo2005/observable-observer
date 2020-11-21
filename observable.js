@@ -1,14 +1,14 @@
 export class Observable {
     constructor() {
-        this.observers = [] ;
+        this.observers = [];
     }
 
     subscribe(observer) {
-        this.observers = [...this.observers, observer]; 
+        this.observers = [...this.observers, observer];
     }
 
     unsubscrive(observer) {
-        this.observers = this.observers.filter(obs => observer !== obs)
+        this.observers = this.observers.filter(obs => observer !== obs);
     }
 
     notify(state) {
