@@ -6,6 +6,7 @@ import {objectSubject} from './objectSubject';
 
 export class valueObserver {
     constructor() {
+        super();
         this.subject = new valueSubject();
         this.subject.subscribe(this.update.bind(this));
     }
@@ -22,6 +23,7 @@ export class valueObserver {
 
 export class arrayObserver {
     constructor() {
+        super();
         this.subject = new arraySubject();
         this.subject.subscribe(this.update.bind(this));
     }
@@ -46,6 +48,7 @@ export class arrayObserver {
 
 export class objectObserver {
     constructor() {
+        super();
         this.subject = new objectSubject();
         this.subject.subscribe(this.update.bind(this));
     }
