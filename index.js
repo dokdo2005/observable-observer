@@ -1,8 +1,8 @@
 // Reference : https://velog.io/@rolled-potatoes/%EC%98%B5%EC%A0%80%EB%B2%84-%ED%8C%A8%ED%84%B4-observer-pattern-with-JavaScript
 
-import {valueSubject} from './valueSubject';
-import {arraySubject} from './arraySubject';
-import {objectSubject} from './objectSubject';
+import {valueSubject} from './subjects/valueSubject';
+import {arraySubject} from './subjects/arraySubject';
+import {objectSubject} from './subjects/objectSubject';
 
 export class valueObserver {
     constructor() {
