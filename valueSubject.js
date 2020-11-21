@@ -14,7 +14,6 @@ export class valueSubject extends Observable {
     }
 
     changeValue(newValue) {
-        const {value} = this.state;
         this.setState({...this.state, value: newValue});
     }
 }
