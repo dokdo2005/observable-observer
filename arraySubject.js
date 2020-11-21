@@ -16,8 +16,8 @@ export class arraySubject extends Observable {
     changeIndex(oldIndex, newIndex) {
         const {value} = this.state;
         let tmpArr = [];
-        let tmpVal = this.state.value[oldIndex];
-        this.state.value.forEach(element => tmpArr.push(element));
+        let tmpVal = value[oldIndex];
+        value.forEach(element => tmpArr.push(element));
         tmpArr[oldIndex] = tmpArr[newIndex];
         tmpArr[newIndex] = tmpVal;
         this.setState({...this.state, value: tmpArr});
@@ -26,7 +26,7 @@ export class arraySubject extends Observable {
     addItem(item) {
         const {value} = this.state;
         let tmpArr = [];
-        this.state.value.forEach(element => tmpArr.push(element));
+        value.forEach(element => tmpArr.push(element));
         tmpArr.push(item);
         this.setState({...this.state, value: tmpArr});
     }
@@ -35,7 +35,7 @@ export class arraySubject extends Observable {
         const {value} = this.state;
         let tmpArr = [];
         let tmpIndex = 0;
-        this.state.value.forEach(element => tmpArr.push(element));
+        value.forEach(element => tmpArr.push(element));
         for (let i in tmpArr) {
             if (tmpArr[i] === item) {
                 tmpIndex = i;
