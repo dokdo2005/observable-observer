@@ -10,7 +10,10 @@ export class valueObserver {
 
     update(state) {
         const {value} = state;
-        console.log(`${typeof value}의 값이 변화하였습니다: ${value}`);
+        let valueElParent = document.querySelector("div");
+        let valueEl = document.createElement("li");
+        valueEl.innerText = `${typeof value}의 값이 변화하였습니다: ${value}`;
+        valueElParent.appendChild(valueEl);
     }
 
     changeValue(newValue) {
@@ -26,7 +29,10 @@ export class arrayObserver {
 
     update(state) {
         const {value} = state;
-        console.log(`Array가 변화하였습니다: ${value}`);
+        let arrayElParent = document.querySelector("div");
+        let arrayEl = document.createElement("li");
+        arrayEl.innerText = `Array가 변화하였습니다: ${value}`;
+        arrayElParent.appendChild(arrayEl);
     }
 
     changeIndex(oldIndex, newIndex) {
@@ -50,7 +56,10 @@ export class objectObserver {
 
     update(state) {
         const {value} = state;
-        console.log(`Object가 변화하였습니다: ${JSON.stringify(value)}`);
+        let objectElParent = document.querySelector("div");
+        let objectEl = document.createElement("li");
+        objectEl.innerText = `Object가 변화하였습니다: ${JSON.stringify(value)}`;
+        objectElParent.appendChild(objectEl);
     }
 
     changeValue(property, newValue) {
