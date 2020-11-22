@@ -1,10 +1,9 @@
-import {valueSubject} from './subjects/valueSubject';
-import {arraySubject} from './subjects/arraySubject';
-import {objectSubject} from './subjects/objectSubject';
+import {valueSubject} from './subjects/valueSubject.js';
+import {arraySubject} from './subjects/arraySubject.js';
+import {objectSubject} from './subjects/objectSubject.js';
 
 export class valueObserver {
     constructor() {
-        super();
         this.subject = new valueSubject();
         this.subject.subscribe(this.update.bind(this));
     }
@@ -21,7 +20,6 @@ export class valueObserver {
 
 export class arrayObserver {
     constructor() {
-        super();
         this.subject = new arraySubject();
         this.subject.subscribe(this.update.bind(this));
     }
@@ -46,14 +44,13 @@ export class arrayObserver {
 
 export class objectObserver {
     constructor() {
-        super();
         this.subject = new objectSubject();
         this.subject.subscribe(this.update.bind(this));
     }
 
     update(state) {
         const {value} = state;
-        console.log(`Object가 변화하였습니다: ${value}`);
+        console.log(`Object가 변화하였습니다: ${JSON.stringify(value)}`);
     }
 
     changeValue(property, newValue) {

@@ -1,4 +1,4 @@
-import {Observable} from '../observable';
+import {Observable} from '../observable.js';
 
 export class arraySubject extends Observable {
     constructor() {

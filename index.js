@@ -1,6 +1,6 @@
 // Reference : https://velog.io/@rolled-potatoes/%EC%98%B5%EC%A0%80%EB%B2%84-%ED%8C%A8%ED%84%B4-observer-pattern-with-JavaScript
 
-import {valueObserver, arrayObserver, objectObserver} from './observable';
+import {valueObserver, arrayObserver, objectObserver} from './observers.js';
 
 const obs1 = new valueObserver();
 const obs2 = new arrayObserver();
